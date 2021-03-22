@@ -1,4 +1,5 @@
 require(randomForest)
+library(rpart)
 fitKF <- randomForest(kyphosis ~ Age + Number + Start, data = kyphosis)
 print(fitFK)
 importance(fitKF)
