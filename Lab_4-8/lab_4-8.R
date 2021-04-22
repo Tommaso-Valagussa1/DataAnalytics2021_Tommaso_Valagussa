@@ -1,0 +1,19 @@
+n <- 150
+p <- 2
+
+sigma <- 1
+meanpos <- 0
+meanneg <- 3
+
+npos <- round(n/2)
+nneg <- n-npos
+
+xpos <- matrix(rnorm(npos*p,mean = meanpos, sd = sigma),npos,p)
+xneg <- matrix(rnorm(npos*p,mean = meanneg, sd = sigma),npos,p)
+
+x <- rbind(xpos,xneg)
+
+y <- matrix(c(rep(1,npos),rep(-1,nneg)))
+
+plot(x,col = ifelse(y>0,1,2))
+legend("topleft",c('Positive','Negative'),col = seq(2),pch = 1, text.col = seq(2))
