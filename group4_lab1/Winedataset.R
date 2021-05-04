@@ -23,3 +23,4 @@ winedata_pca
 plot(winedata_pca)
 
 summary(winedata_pca)
+

@@ -1,5 +1,5 @@
 library(ISLR)
-
+library(ggplot2)
 head(iris)
 str(iris)
 
